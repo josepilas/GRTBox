@@ -1277,6 +1277,32 @@ Before shipping a `.tl`, confirm:
 11. Start the built app as administrator.
 12. Open each changed tool and test the real workflow.
 
+## Submitting Tools To The Tool Store
+
+To submit a tool for possible inclusion in the GRTBox Tool Store, send an email to:
+
+```text
+grtbox@proton.me
+```
+
+The email must include a direct link to the `.tl` package. Do not attach large files directly to the email. Host the `.tl` package on a public file host or another accessible server and include the download link in the message.
+
+Recommended email content:
+
+```text
+Subject: GRTBox Tool Store Submission - <Tool Name>
+
+Tool name:
+Tool version:
+Author:
+Short description:
+Direct .tl download link:
+```
+
+After submission, the package may be downloaded, tested, reviewed, and manually uploaded to the Tool Store if it is compatible with GRTBox requirements.
+
+Submission does not guarantee publication. Tools may be rejected if they are incomplete, unsafe, broken, non-portable, missing required manifest fields, or incompatible with the current GRTBox runtime.
+
 ## Example Commands For Current Tools
 
 Build Sample Tool:
