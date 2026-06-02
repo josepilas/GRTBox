@@ -1,6 +1,6 @@
 # GRTBox
 
-**GRTBox** is a desktop toolbox environment designed to organize, install, and run useful tools for Linux-based retro handhelds, with an initial focus on the R36S family and compatible devices.
+**GRTBox** (Gambiarra R36S Toolbox) is a desktop toolbox environment designed to organize, install, and run useful tools for Linux-based retro handhelds, with an initial focus on the R36S family and compatible devices.
 
 It is not a firmware, not an operating system, and not a replacement for the community projects that already power these handhelds. GRTBox is a companion application: a central place where users can find and run utilities that would otherwise be scattered across guides, forums, repositories, scripts, and separate programs.
 
