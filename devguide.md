@@ -518,8 +518,8 @@ Input:
 h("input", {
   value: state.query,
   placeholder: "Search...",
-  onInput: (event) => {
-    state.query = event.target.value;
+  onInput: (value) => {
+    state.query = value;
     render();
   }
 })
@@ -530,8 +530,21 @@ Textarea:
 ```js
 h("textarea", {
   value: state.notes,
-  onInput: (event) => {
-    state.notes = event.target.value;
+  onInput: (value) => {
+    state.notes = value;
+  }
+})
+```
+
+Checkbox:
+
+```js
+h("input", {
+  type: "checkbox",
+  checked: state.enabled,
+  onChange: (checked) => {
+    state.enabled = checked;
+    render();
   }
 })
 ```
@@ -541,8 +554,8 @@ Select:
 ```js
 h("select", {
   value: state.mode,
-  onChange: (event) => {
-    state.mode = event.target.value;
+  onChange: (value) => {
+    state.mode = value;
     render();
   }
 }, [
@@ -797,6 +810,10 @@ const id = runtime.timers.setInterval(refresh, 5000);
 runtime.timers.clearInterval(id);
 ```
 
+Always clear timers through `runtime.timers.clearInterval` or
+`runtime.timers.clearTimeout`. GRTBox tracks those timer handles and clears them
+when the user leaves or reloads the tool.
+
 Use timers only when the UI truly needs polling. For tools like Internet Bridge,
 avoid constant background polling that runs PowerShell forever while the user is
 not doing anything.
@@ -807,9 +824,13 @@ not doing anything.
 const text = await runtime.http.get("https://example.com/status.json");
 ```
 
+`runtime.http.get` and `runtime.http.post` return response text for successful
+HTTP responses. They throw an error for non-2xx responses so tools can show a
+clear failure instead of silently parsing an error page.
+
 Use HTTP for small metadata only. Large firmware downloads should normally be
-performed with PowerShell or a controlled process so the tool can write to a
-file, verify hashes, and recover from failures.
+performed with a bundled native helper or another controlled process so the tool
+can write to a file, verify hashes, resume, and recover from failures.
 
 ### `runtime.json`
 
