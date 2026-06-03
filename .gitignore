@@ -1,0 +1,34 @@
+# Build outputs
+/build/bin/
+/bin/
+/dist/
+/frontend/dist/
+
+# Frontend dependencies
+/frontend/node_modules/
+
+# Local environment
+.env
+.env.*
+.DS_Store
+Thumbs.db
+
+# Go tooling
+*.test
+coverage.out
+
+# Private/runtime package artifacts
+/admin69/
+/site/
+/tools/
+/examples/
+*.tl
+*.zip
+*.exe
+*.log
+*.tmp
+*.bak
+*.backup*
+
+# Deployment/private web code
+*.php
