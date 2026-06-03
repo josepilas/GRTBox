@@ -16,6 +16,36 @@ GRTBox tries to make technical maintenance tasks feel more like using a normal d
 
 ---
 
+## Important Clarification: GRTBox Does Not Run On The R36S
+
+GRTBox is a desktop application for the user's computer. It is not an application that runs directly on the R36S, R36H, or any other retro handheld device.
+
+The name "Gambiarra R36S Toolbox" means that GRTBox is designed to help users manage, organize, and run desktop utilities related to R36S-style Linux handhelds. It does not mean that GRTBox is installed on the handheld itself.
+
+In practical terms:
+
+```text
+GRTBox runs on the PC.
+The handheld remains the device being managed, repaired, prepared, or supported.
+```
+
+GRTBox should be understood as a companion desktop toolbox. It can help with workflows around firmware files, SD cards, DTB files, device maintenance, diagnostics, downloads, and community utilities, but those tools are launched from the desktop environment, not from inside the handheld.
+
+GRTBox is not:
+
+```text
+A firmware for the R36S
+An operating system for the R36S
+A handheld launcher
+An EmulationStation theme
+A replacement for ArkOS, ROCKNIX, AmberELEC, or similar systems
+A program that must be copied to the console's SD card to run
+```
+
+Instead, GRTBox is the desktop hub that helps users access and run tools related to those devices in a more organized way.
+
+---
+
 ## Why GRTBox Exists
 
 Retro handhelds such as the R36S and similar devices are popular because they are inexpensive, flexible, and supported by a very active community. At the same time, they can be confusing for new users.
